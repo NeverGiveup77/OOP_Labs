@@ -54,25 +54,6 @@ model.fit(X, y, batch_size=32, epochs=10)
 
 #model = keras.models.load_model("kerasModel_1_0_MIXED")
 
-# for category in CATEGORIES:
-#     path = os.path.join(DATADIR, category)  # join path
-#     class_num = CATEGORIES.index(category)
-#     for img in os.listdir(path):
-#         #new_array = mpimg.imread(os.path.join(path, img))
-#         new_array = cv2.imread(os.path.join(path, img))
-#         test = np.array(new_array).reshape(-1, IMG_HEIGHT, IMG_WIDTH, 3)
-#         prediction = model.predict(test)
-#         if round(prediction[0][1]) == True:
-#             print("Cobblestone")
-#         else:
-#             print("Asphalt")
-            
-#         #np.argmax(prediction[0])
-#         #prediction = (CATEGORIES[int(prediction[0][0])])
-#         #print(prediction)
-#         plt.imshow(new_array)
-#         plt.show()
-
 model.save("kerasModel_1_0_MIXED")
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
 tflite_model = converter.convert()

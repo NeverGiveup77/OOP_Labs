@@ -35,4 +35,8 @@ public class AccelerometerGraphJNI {
      public static native double getAxis();
      public static native void pause();
      public static native void resume();
+          public static native void drawFrame_REC();
+     public static native double getAxis();
+     public static native void pause();
+     public static native void resume();
 }

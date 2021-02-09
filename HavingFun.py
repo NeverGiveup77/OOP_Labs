@@ -31,6 +31,7 @@ dense_layers = [0]
 layer_sizes = [64]
 conv_layers = [3]
 
+##frewfgergrtkjmrsgp ogjsp o
 for dense_layer in dense_layers:
     for layer_size in layer_sizes:
         for conv_layer in conv_layers:
